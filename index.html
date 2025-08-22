@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/md-screens.css" media="(min-width: 601px) and (max-width: 1024px)">
     <link rel="stylesheet" href="css/lg-screens.css" media="(min-width: 1025px)"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/js/script.js" defer></script>
+
 </head>
 <body>
-    <button id="hamburger-menu" onclick="openSidebar()">
+    <button id="hamburger-menu" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
         <img src="/images/hamburger_menu.svg" alt="" width="20px" height="20px">
     </button>
     
@@ -18,17 +20,20 @@
     <!-- nav -->
     <nav id="navbar">            
         <div class="content-container">
-            <button id="close-hamburger-menu" onclick="closeSidebar()">
+            <button id="close-hamburger-menu" onclick="closeSidebar()" aria-label="close sidebar">
                 <img src="/images/close.svg" alt="" width="40px" height="40px">
             </button>
-            <a href="index.html" id="home">Louie's Car Stereo</a>
+            <a href="index.html" id="home" aria-link="page" class="active">Louie's Car Stereo</a>
             <ul>
                 <li><a href="#">About Us</a></li>
                 <li><a href="pages/audio.html">Services</a></li>
                 <li><a href="#location">Contact Us</a></li>
+
             </ul>
         </div>
     </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
 
     <div class="container">       
 
@@ -39,6 +44,7 @@
                     <div class="content">
                         <h1>Louie's Car Stereo & Window Tinting</h1>
                         <p>Serving Jacksonville with top-tier installation and products</p>
+
                         <button>Get a Free Quote</button>
                     </div>
                 </div>
@@ -64,34 +70,47 @@
             <div class="content-wrapper">
                 <h2>Featured Products</h2>
                 <div class="content-container ">
-                    <div class="content">
-                        <div class="img-wrapper"><img src="/images/kenwood_dmx400s copy.png" alt=""></div>
-                        <div>
-                            <p>Kenwood DMX 400S</p>
-                            <p>Head Unit</p>
-                            <button>View Details</button>
+                
+                <div class="content">
+                    <div class="img-wrapper"><img src="/images/kenwood_dmx400s copy.png" alt=""></div>
+                    <div class="card">
+                        <strong>Kenwood DMX 400S</strong>
+                        <p>Head Unit</p>
+                        <div class="hide">
+                            A double-DIN head unit with Apple CarPlay and Android Auto support, offering touchscreen convenience and modern connectivity for your vehicle.
                         </div>
+                        <button class="toggleBtn">Show Details</button>
                     </div>
-                    <div class="content">
-                        <div class="img-wrapper"><img src="/images/jensen_car813 copy.png" alt=""></div>
-                        <div>
-                            <p>Jensen CAR 813</p>
-                            <p>Media Receiver</p>
-                            <button>View Details</button>
+                </div>
+
+                <div class="content">
+                    <div class="img-wrapper"><img src="/images/jensen_car813 copy.png" alt=""></div>
+                    <div class="card">
+                        <strong>Jensen CAR 813</strong>
+                        <p>Media Receiver</p>
+                        <div class="hide">
+                            A compact media receiver designed for seamless Bluetooth streaming, hands-free calling, and simple audio control.
                         </div>
+                        <button class="toggleBtn">Show Details</button>
                     </div>
-                    <div class="content">
-                        <div class="img-wrapper"><img src="/images/soundstream_vrcp65 copy.png" alt=""></div>
-                        <div>
-                            <p>Soundstream VRCP65</p>
-                            <p>Head Unit</p>
-                            <button>View Details</button>
+                </div>
+
+                <div class="content">
+                    <div class="img-wrapper"><img src="/images/soundstream_vrcp65 copy.png" alt=""></div>
+                    <div class="card">
+                        <strong>Soundstream VRCP65</strong>
+                        <p>Head Unit</p>
+                        <div class="hide">
+                            A multimedia head unit with a responsive touchscreen, Bluetooth audio, and support for multiple media formats for an upgraded driving experience.
                         </div>
+                        <button class="toggleBtn">Show Details</button>
                     </div>
+                </div>
 
                 </div>
             </div>
         </section>
+
 
         <!-- services -->
         <section id="services">
@@ -100,22 +119,22 @@
                 <div class="content-container">
                     <div class="content">
                         <div class="img-wrapper"><img src="/images/installation.png" alt=""></div>
-                        <div>
-                            <strong>Installation</strong>
+                        <div class="card">
+                            
                             <p>Professional installation of car audio systems</p>
                         </div>
                     </div>
                     <div class="content">
                         <div class="img-wrapper"><img src="/images/custom_audio.png" alt=""></div>
-                        <div>
-                            <strong>Custom Audio</strong>
+                        <div class="card">
+                            
                             <p>Tailored audio solutions for your vehicle</p>
                         </div>
                     </div>
                     <div class="content">
                         <div class="img-wrapper"><img src="/images/window_tint.png" alt=""></div>
-                        <div>
-                            <strong>Window Tint</strong>
+                        <div class="card ">
+                            
                             <p>We have tint for all vehicle makes and models</p>
                         </div>
                     </div>

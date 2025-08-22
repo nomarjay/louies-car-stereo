@@ -8,26 +8,31 @@
     <link rel="stylesheet" href="/css/md-screens.css" media="(min-width: 601px) and (max-width: 1024px)">
     <link rel="stylesheet" href="/css/lg-screens.css" media="(min-width: 1025px)"> 
     <script src="/js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <button id="hamburger-menu" onclick="openSidebar()">
+    <button id="hamburger-menu" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
         <img src="/images/hamburger_menu.svg" alt="" width="20px" height="20px">
-    </button>    
+    </button>
     
+       
     <!-- nav -->
     <nav id="navbar">            
         <div class="content-container">
-            <button id="close-hamburger-menu" onclick="closeSidebar()">
+            <button id="close-hamburger-menu" onclick="closeSidebar()" aria-label="close sidebar">
                 <img src="/images/close.svg" alt="" width="40px" height="40px">
             </button>
             <a href="/index.html" id="home">Louie's Car Stereo</a>
             <ul>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#" aria-link="page" class="active">Services</a></li>
                 <li><a href="/index.html#location">Contact Us</a></li>
+
             </ul>
         </div>
     </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
 
     <div class="container">       
 
@@ -48,13 +53,13 @@
         <!-- sections -->
         <div class="services-nav">
             <ul>
-                <li><a href="audio.html" class="active">Audio</a></li>
+                <li><a href="#" class="active">Audio</a></li>
                 <li><a href="video.html">Video</a></li>
                 <li><a href="security.html">Security</a></li>
                 <li><a href="window.html">Window Tint</a></li>
             </ul>
         </div>
-                
+        
         <section id="audio">
             <div class="content-wrapper">
                 <div class="content-container">
@@ -65,9 +70,9 @@
                             <li>Stereo Head Units</li>
                             <li>Amplifiers</li>
                             <li>Subwoofers</li>
-                            <li>and more..</li>
+                            <li><strong>and more..</strong></li>
                         </ul>
-                        <button>More</button>
+                        
                     </div>
                     
                     <img src="\images\123708868_3768188979880934_1271282660742468940_n.jpg" alt="">
@@ -76,39 +81,52 @@
         </section>
 
        
-
+         <!-- products -->
         <section id="products">
             <div class="content-wrapper">
                 <h2>Featured Products</h2>
                 <div class="content-container ">
-                    <div class="content">
-                        <img src="/images/kenwood_dmx400s copy.png" alt="">
-                        <div>
-                            <p>Kenwood DMX 400S</p>
-                            <p>Head Unit</p>
-                            <button>View Details</button>
+                
+                <div class="content">
+                    <div class="img-wrapper"><img src="/images/kenwood_dmx400s copy.png" alt=""></div>
+                    <div class="card">
+                        <strong>Kenwood DMX 400S</strong>
+                        <p>Head Unit</p>
+                        <div class="hide">
+                            A double-DIN head unit with Apple CarPlay and Android Auto support, offering touchscreen convenience and modern connectivity for your vehicle.
                         </div>
+                        <button class="toggleBtn">Show Details</button>
                     </div>
-                    <div class="content">
-                        <img src="/images/jensen_car813 copy.png" alt="">
-                        <div>
-                            <p>Jensen CAR 813</p>
-                            <p>Media Receiver</p>
-                            <button>View Details</button>
+                </div>
+
+                <div class="content">
+                    <div class="img-wrapper"><img src="/images/jensen_car813 copy.png" alt=""></div>
+                    <div class="card">
+                        <strong>Jensen CAR 813</strong>
+                        <p>Media Receiver</p>
+                        <div class="hide">
+                            A compact media receiver designed for seamless Bluetooth streaming, hands-free calling, and simple audio control.
                         </div>
+                        <button class="toggleBtn">Show Details</button>
                     </div>
-                    <div class="content">
-                        <img src="/images/soundstream_vrcp65 copy.png" alt="">
-                        <div>
-                            <p>Soundstream VRCP65</p>
-                            <p>Head Unit</p>
-                            <button>View Details</button>
+                </div>
+
+                <div class="content">
+                    <div class="img-wrapper"><img src="/images/soundstream_vrcp65 copy.png" alt=""></div>
+                    <div class="card">
+                        <strong>Soundstream VRCP65</strong>
+                        <p>Head Unit</p>
+                        <div class="hide">
+                            A multimedia head unit with a responsive touchscreen, Bluetooth audio, and support for multiple media formats for an upgraded driving experience.
                         </div>
+                        <button class="toggleBtn">Show Details</button>
                     </div>
+                </div>
 
                 </div>
             </div>
         </section>
+
 
 
 
@@ -119,17 +137,9 @@
                 <div class="content-container">
                     <div class="content">
                         <img src="/images/pioneer_logo.png" alt="pioneer brand logo">
-                    </div>
-                    <div class="content">
                         <img src="/images/jvc_logo.png" alt="jvc brand logo">
-                    </div>
-                    <div class="content">
                         <img src="/images/kenwood_logo.png" alt="kenwood brand logo">
-                    </div>
-                    <div class="content">
                         <img src="/images/kicker_logo.png" alt="kicker brand logo">
-                    </div>
-                    <div class="content">
                         <img src="/images/alpine_logo.png" alt="alpine brand logo">
                     </div>
                 </div>
