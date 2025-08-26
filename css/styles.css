@@ -14,7 +14,7 @@
 }
 
 :root{
-  --charcoal: rgb(27, 27, 27);
+  --charcoal: rgb(19, 19, 19);
   --retro-red: rgb(203, 47, 4);
   --white: whitesmoke;
   --lightgrey: rgb(225, 225, 225);
@@ -121,6 +121,9 @@ p,span,strong,li,a, button{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 20px;
+
+   
 
     }
 
@@ -194,9 +197,10 @@ p,span,strong,li,a, button{
 
     /* hero action */
     #hero{
-        background-image: url("/images/heroimg.jpg");
         width: 100vw;
         height: 60vh;
+
+        background-image: url("/images/505242280_24256687247271140_1829573419461064481_n.jpg");
         background-size: cover;
         background-color: rgba(0, 0, 0, 0.603);
         background-blend-mode: multiply;
@@ -268,10 +272,10 @@ p,span,strong,li,a, button{
         }
 
         & .content{
-            min-height: 300px;
-            height: 500px;
+            height: auto;
             width: clamp(350px, 80%, 400px);
             background-color: var(--white);
+            padding-bottom: 20px;
 
             display: flex;
             flex-direction: column;
@@ -295,9 +299,13 @@ p,span,strong,li,a, button{
 
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 20px;
             align-items: center;
             justify-content: center;
+
+            & .hide{
+            line-height: 1.7rem;
+            }
         }
         
         & img{
@@ -367,6 +375,13 @@ p,span,strong,li,a, button{
             width: clamp(350px, 80%, 400px);
             margin-top: 20px;
             height: 250px;
+            border: 2px solid var(--white);
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.447);
+        }
+
+        & a{
+            color: black;
+            font-weight: 500;
         }
     }
 
@@ -379,6 +394,7 @@ p,span,strong,li,a, button{
             flex-direction: column;
             gap: 40px;
             align-items: center;
+            line-height: 1.7rem;
             
         }
 
@@ -423,32 +439,28 @@ p,span,strong,li,a, button{
     /* services */
 
     .services-nav{
+        background-color: rgb(0, 0, 0);
+        height: 50px;
         width: 100vw;
-        background-color: black;
 
         display: flex;
         justify-content: center;
         align-items: center;
 
         & ul{
-               list-style: none;
-            padding: 0 40px;
-
+            width: 100%;
+            max-width: 580px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0 40px;
         }
 
-        & li{
-            height: 50px;
-            width: 100vw;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.142);
-            text-align: center;
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        & a.active {
+            border-bottom: 2px solid red; 
+            padding-bottom: 5px;
         }
 
     }

@@ -84,21 +84,11 @@
             margin-left: 50px;
         }
 
-        & a{
-            display: inline-block;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.3s ease-in;  
-        }
 
         & a.active{
-            color: var(--retro-red);
-            font-weight:bold;
-            
-        }
-
-        
+            color: white;
+            font-weight:bold;            
+        }       
 
 
 
@@ -111,9 +101,9 @@
         max-width: 1920px;
         height: 80vh;
 
-        background-image: url("/images/heroimg.jpg");
+        background-image: url("/images/505242280_24256687247271140_1829573419461064481_n.jpg");
         background-size: cover;
-        background-color: rgba(20, 13, 49, 0.603);
+        background-color: rgba(8, 5, 2, 0.726);
         background-blend-mode: multiply;
         background-repeat: no-repeat;
 
@@ -177,14 +167,15 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            align-items: center;
+            align-items: start;
             gap: 40px;
         }
 
         & .content{
-            height: 500px;
+            height: auto;
             width: clamp(350px, 80%, 400px);
             background-color: var(--white);
+            padding-bottom: 20px;
 
             display: flex;
             flex-direction: column;
@@ -208,9 +199,13 @@
 
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 20px;
             align-items: center;
             justify-content: center;
+
+            & .hide{
+                line-height: 1.7rem;
+            }
         }
 
         & img{
@@ -219,8 +214,29 @@
             justify-self: start;
         }
 
-
+        
     } 
+
+    #services{
+
+        & .img-wrapper{
+                height: 200px;
+        }
+
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        & .card{
+
+        }
+
+        & .content{
+            min-height: 350px;
+        }
+    }
 
     /* brands */
     #brands{
@@ -289,7 +305,15 @@
 
         #map{
             width: 50%;
-            height: clamp(300px, 500px, 700px)
+            height: clamp(300px, 500px, 700px);
+            border: 2px solid var(--white);
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.447);
+            
+        }
+
+        & a{
+            color: black;
+            font-weight: 500;
         }
     }
 
@@ -303,6 +327,7 @@
             justify-content: center;
             gap: 40px;
             align-items: start;
+            line-height: 1.7rem;
         }
 
         & .content{
@@ -346,10 +371,11 @@
     /* services nav */
        .services-nav{
         background-color: rgb(0, 0, 0);
-
-        display: flex;
         height: 50px;
         width: 100%;
+        margin-bottom: -20px;
+
+        display: flex;
         justify-content: center;
         align-items: center;
 
