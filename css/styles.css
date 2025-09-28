@@ -60,6 +60,7 @@ p,span,strong,li,a, button{
  nav, footer{
     background-color: var(--charcoal);
     color: var(--white);
+    z-index: 10000;
  }
 
  #hero{
