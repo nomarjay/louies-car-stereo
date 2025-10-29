@@ -443,8 +443,9 @@
             font-size: small;
             font-weight: 500;
             color: black;
-        }
 
+        }
+        
         & img{
             width: 80%;
             max-width: 700px;
@@ -453,6 +454,12 @@
             border: 1px solid black;
             box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.616);
         }
+
+        
+        & small{
+           display: block;
+           text-align: center;
+       }
     }
     
 
