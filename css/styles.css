@@ -254,6 +254,10 @@ p,span,strong,li,a, button{
 
 
     /* services / products*/
+    #services img{
+        width: 100% !important;
+        height: 100% !important;
+    }
     #products, #services{
 
         & button{

@@ -41,8 +41,9 @@ $(function () {
   // --- bindings ---
   // Open/close via hamburger/close buttons
   $hamburger.on("click", function (e) {
+    // console.log("hamburger clicked")
     e.preventDefault();
-    toggleSidebar();
+    openSidebar();
   });
   $closeBtn.on("click", function (e) {
     e.preventDefault();
